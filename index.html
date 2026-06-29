@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adproduction | Premium Wedding & Portrait Photographer in Lucknow</title>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Capture your special moments with Adproduction, Lucknow's leading professional photography service specializing in Destination Weddings, Pre-weddings, Events, and Cinematic Editing. Over 5 years of capturing love stories.">
+    <meta name="keywords" content="Adproduction Lucknow, Photographer Lucknow, Wedding photography Lucknow, Destination wedding Lucknow, Pre-wedding shoot Lucknow, Adproduction LDA Colony">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fdfbf7',
+                            100: '#f7f1e1',
+                            200: '#eddcb5',
+                            300: '#dec280',
+                            400: '#c5a059', // Master Premium Matte Gold for Light Background
+                            500: '#b0873e',
+                            600: '#916b2c',
+                            700: '#6d4e20',
+                            800: '#4a3416',
+                            900: '#281b0a',
+                        },
+                        glass: {
+                            light: 'rgba(255, 255, 255, 0.45)',
+                            border: 'rgba(255, 255, 255, 0.65)',
+                            shadow: 'rgba(31, 41, 55, 0.08)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'liquid-light': '0 10px 40px -10px rgba(145, 107, 44, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05)',
+                        'gold-glow': '0 0 25px rgba(197, 160, 89, 0.25)',
+                        'neon-glow': '0 0 40px rgba(197, 160, 89, 0.4)',
+                        'ios-glass': '0 8px 32px 0 rgba(31, 38, 135, 0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts (Outfit & Playfair Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js Plugins & Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom Liquid/Glass Stylesheets -->
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        /* Premium custom scrollbar styling - Matte Gold & White */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #c5a059, #b0873e);
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #916b2c;
+        }
+
+        /* Ambient Pulsing Liquid Orbs for Light Theme */
+        .liquid-orb-1 {
+            background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, rgba(255,255,255,0) 70%);
+        }
+        .liquid-orb-2 {
+            background: radial-gradient(circle, rgba(244,63,94,0.06) 0%, rgba(255,255,255,0) 70%);
+        }
+        .liquid-orb-3 {
+            background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, rgba(255,255,255,0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-gold-400 selection:text-white overflow-x-hidden relative" x-data="portfolioApp()">
+
+    <!-- Ambient Liquid Lighting Orbs for Elegant Light Backdrop -->
+    <div class="absolute top-[5%] left-[-10%] w-[700px] h-[700px] liquid-orb-1 rounded-full blur-[100px] pointer-events-none -z-10 animate-pulse duration-[8000ms]"></div>
+    <div class="absolute top-[35%] right-[-10%] w-[800px] h-[800px] liquid-orb-2 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse duration-[10000ms]"></div>
+    <div class="absolute bottom-[10%] left-[15%] w-[900px] h-[900px] liquid-orb-3 rounded-full blur-[130px] pointer-events-none -z-10 animate-pulse duration-[12000ms]"></div>
+
+    <!-- Header Navigation with iOS Frosted Glass Effect -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 backdrop-blur-xl border-b"
+            :class="{ 'py-3 bg-white/75 border-slate-200/60 shadow-liquid-light': scrolled, 'py-5 bg-transparent border-transparent': !scrolled }"
+            @scroll.window="scrolled = (window.pageYOffset > 50) ? true : false">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                
+                <!-- Brand Logo & Glass Reflection Emblem -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="relative w-11 h-11 rounded-xl border border-slate-200 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-gold-500 bg-white/50 backdrop-blur-md shadow-sm">
+                        <!-- Liquid refraction highlight inside logo -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <i class="fa-solid fa-camera text-gold-500 text-lg group-hover:text-gold-600 transition-colors"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-serif font-bold tracking-[0.12em] text-slate-900 group-hover:text-gold-500 transition-colors">
+                            AD<span class="text-gold-500 font-light">PRODUCTION</span>
+                        </span>
+                        <p class="text-[9px] uppercase tracking-[0.3em] text-slate-500 font-sans -mt-1">Storytelling in Frames</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-600">
+                    <a href="#about" class="hover:text-gold-500 transition-colors duration-300 relative py-1 group">
+                        About Us
+                        <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#services" class="hover:text-gold-500 transition-colors duration-300 relative py-1 group">
+                        Specialties
+                        <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#portfolio" class="hover:text-gold-500 transition-colors duration-300 relative py-1 group">
+                        Our Work
+                        <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#pricing-estimator" class="hover:text-gold-500 transition-colors duration-300 relative py-1 group">
+                        Package Planner
+                        <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="hover:text-gold-500 transition-colors duration-300 relative py-1 group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- Premium Header CTA -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/919335300898" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-gold-500/30 bg-gold-500/5 text-gold-600 hover:bg-gold-500 hover:text-white hover:shadow-gold-glow transition-all duration-500 text-xs font-bold tracking-wider uppercase flex items-center gap-2 backdrop-blur-md">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Let's Chat
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-slate-800 hover:text-gold-500 focus:outline-none p-2 rounded-lg bg-white/80 border border-slate-200 shadow-sm" aria-label="Toggle Menu">
+                    <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-xl' : 'fa-bars-staggered text-xl'"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Frosted Glass Panel -->
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 -translate-y-8"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-8"
+             class="md:hidden bg-white/95 backdrop-blur-2xl border-b border-slate-200 shadow-2xl absolute top-full left-0 w-full"
+             x-cloak>
+            <div class="px-6 pt-4 pb-8 space-y-4">
+                <a href="#about" @click="mobileMenuOpen = false" class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-700 bg-slate-50/50 border border-slate-100 hover:text-gold-500 transition-all">About Us</a>
+                <a href="#services" @click="mobileMenuOpen = false" class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-700 bg-slate-50/50 border border-slate-100 hover:text-gold-500 transition-all">Specialties</a>
+                <a href="#portfolio" @click="mobileMenuOpen = false" class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-700 bg-slate-50/50 border border-slate-100 hover:text-gold-500 transition-all">Our Work</a>
+                <a href="#pricing-estimator" @click="mobileMenuOpen = false" class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-700 bg-slate-50/50 border border-slate-100 hover:text-gold-500 transition-all">Package Planner</a>
+                <a href="#contact" @click="mobileMenuOpen = false" class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-700 bg-slate-50/50 border border-slate-100 hover:text-gold-500 transition-all">Get in Touch</a>
+                <div class="pt-4 border-t border-slate-200 flex flex-col gap-3">
+                    <a href="tel:09335300898" class="flex items-center justify-center gap-2 py-3.5 bg-slate-100 border border-slate-200 rounded-xl text-slate-800 font-semibold hover:bg-slate-200 transition">
+                        <i class="fa-solid fa-phone text-gold-500"></i> Call Studio
+                    </a>
+                    <a href="https://wa.me/919335300898" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl text-white font-semibold transition shadow-lg">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Fully Visible Vibrancy -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-slate-100">
+        <!-- Soft gradient background mask -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#f8fafc] via-[#f8fafc]/30 to-white/20 z-10 pointer-events-none"></div>
+
+        <!-- Cinematographic Bright Image Slider -->
+        <div class="absolute inset-0 z-0">
+            <template x-for="(slide, index) in heroSlides" :key="index">
+                <div x-show="activeSlide === index"
+                     x-transition:enter="transition duration-1200 ease-out"
+                     x-transition:enter-start="opacity-0 scale-102"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition duration-1200 ease-in"
+                     x-transition:leave-start="opacity-100 scale-100"
+                     x-transition:leave-end="opacity-0 scale-98"
+                     class="absolute inset-0 w-full h-full"
+                     x-cloak>
+                    <!-- Enhanced Visibility: Removed heavy dark filters, kept a soft, natural aesthetic -->
+                    <img :src="slide.image" :alt="slide.title" class="w-full h-full object-cover filter brightness-[0.82] contrast-[1.02]">
+                </div>
+            </template>
+        </div>
+
+        <!-- Content Area: Premium Frosted Liquid Glass Central Card -->
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center text-center z-20 mt-12">
+            
+            <div class="p-8 sm:p-12 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/80 shadow-ios-glass max-w-3xl">
+                <!-- Google Review Glass Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 border border-slate-200/80 mb-6 shadow-sm hover:border-gold-400 transition duration-500">
+                    <span class="flex text-amber-500 gap-1 text-xs drop-shadow-[0_1px_4px_rgba(251,191,36,0.2)]">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="text-xs font-bold text-slate-700 tracking-wide">
+                        4.976 Rated Google Studio (Lucknow)
+                    </span>
+                    <i class="fa-solid fa-circle-check text-emerald-500 text-xs ml-1"></i>
+                </div>
+
+                <!-- Beautiful Serif Title -->
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-slate-900 leading-[1.15]">
+                    Framing Your <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-gold-600 to-amber-600 font-normal italic drop-shadow-[0_2px_8px_rgba(197,160,89,0.1)]">Golden Memories</span>
+                </h1>
+                
+                <p class="mt-4 text-xs sm:text-base text-slate-600 font-medium tracking-wide leading-relaxed">
+                    Lucknow's award-winning visual storytelling team. Celebrating 5 years of editorial-grade wedding portraiture, pre-weddings, and cinematic films.
+                </p>
+
+                <!-- Dynamic slide indicators / captions -->
+                <div class="mt-4 flex items-center justify-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    <p class="text-gold-600 text-xs tracking-[0.25em] uppercase font-bold" x-text="heroSlides[activeSlide].subtitle"></p>
+                </div>
+
+                <!-- Glass Action Buttons (iOS Style) -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#portfolio" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-gold-500 text-white font-bold tracking-widest text-xs uppercase shadow-gold-glow transition-all duration-300 transform hover:-translate-y-1">
+                        Explore Gallery <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                    <a href="#pricing-estimator" class="px-8 py-3.5 rounded-2xl bg-white/80 hover:bg-slate-50 border border-slate-200/80 text-slate-800 font-bold tracking-widest text-xs uppercase transition-all duration-300 transform hover:-translate-y-1">
+                        Plan Your Event
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Progress Indicators -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3 bg-white/65 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">
+            <template x-for="(slide, index) in heroSlides" :key="index">
+                <button @click="changeSlide(index)" 
+                        class="h-1.5 rounded-full transition-all duration-500"
+                        :class="activeSlide === index ? 'bg-gold-500 w-8' : 'bg-slate-300 hover:bg-slate-400 w-2'"></button>
+            </template>
+        </div>
+    </section>
+
+    <!-- Quick Stats Ribbon (Bright and Cleaned Up) -->
+    <section class="py-12 bg-white/60 border-y border-slate-200/60 backdrop-blur-xl relative z-20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 text-center">
+                <div class="space-y-1 border-r border-slate-100 last:border-none">
+                    <p class="text-4xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-gold-500">5+</p>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-extrabold text-slate-500">Years Active</p>
+                </div>
+                <div class="space-y-1 md:border-r border-slate-100">
+                    <p class="text-4xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-gold-500">200+</p>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-extrabold text-slate-500">Weddings Immortalized</p>
+                </div>
+                <div class="space-y-1 border-r border-slate-100 last:border-none">
+                    <p class="text-4xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-gold-500">4.97</p>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-extrabold text-slate-500">Google Rating Score</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-4xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-gold-500">100%</p>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-extrabold text-slate-500">Happy Client Smiles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: High Visibility & Vibrant Photos -->
+    <section id="about" class="py-28 bg-transparent relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                
+                <!-- Vibrant Glass Image Group (Grayscale filters removed completely!) -->
+                <div class="relative flex justify-center lg:justify-start">
+                    <!-- Glass outer glow ring -->
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-gold-400/15 via-transparent to-rose-500/10 rounded-3xl blur-2xl opacity-75 -z-10"></div>
+                    
+                    <div class="w-full max-w-[450px] aspect-[4/5] rounded-3xl overflow-hidden border border-white bg-white/40 shadow-liquid-light p-2.5">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200" alt="Photographer Capturing Couple" class="w-full h-full object-cover rounded-2xl hover:scale-102 transition-all duration-700">
+                    </div>
+                    
+                    <!-- Overlapping Mini Glass Frame (Bright Wedding Couple) -->
+                    <div class="absolute -bottom-8 -right-4 w-1/2 aspect-square rounded-2xl overflow-hidden border border-white shadow-liquid-light bg-white/50 backdrop-blur-xl p-2.5 hidden sm:block transform hover:scale-105 transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=800" alt="Indian Wedding Couple" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Descriptive iOS Glass Points -->
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">Our Creative Ethos</span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Meet Adproduction</h2>
+                    </div>
+
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-light">
+                        Based in the culturally vibrant city of Lucknow, Uttar Pradesh, <strong class="text-gold-500 font-semibold">Adproduction</strong> has spent over half a decade defining fine-art wedding and events storytelling.
+                    </p>
+                    
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        We don't merely point, click, and process. We weave standard celebrations into emotional cinematic experiences. Specializing in high-end Destination Weddings, grand local celebrations, breathtaking Pre-wedding visual concepts, and state-of-the-art cinematic post-processing, we ensure your once-in-a-lifetime events live on flawlessly across generations.
+                    </p>
+
+                    <!-- iOS Transparent Glass Capsules -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-white/50 border border-white hover:bg-white/85 hover:border-gold-400/30 shadow-sm transition-all duration-300">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/20">
+                                <i class="fa-solid fa-award text-gold-500 text-sm"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-slate-700 font-bold">Lucknow's Top Rated</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-white/50 border border-white hover:bg-white/85 hover:border-gold-400/30 shadow-sm transition-all duration-300">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/20">
+                                <i class="fa-solid fa-camera-retro text-gold-500 text-sm"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-slate-700 font-bold">G-Master Lens Arsenal</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-white/50 border border-white hover:bg-white/85 hover:border-gold-400/30 shadow-sm transition-all duration-300">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/20">
+                                <i class="fa-solid fa-map-location-dot text-gold-500 text-sm"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-slate-700 font-bold">Travel Ready Globally</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-white/50 border border-white hover:bg-white/85 hover:border-gold-400/30 shadow-sm transition-all duration-300">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/20">
+                                <i class="fa-solid fa-wand-magic-sparkles text-gold-500 text-sm"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-slate-700 font-bold">Cinematic Colorist Team</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Connect Buttons -->
+                    <div class="pt-6 flex flex-wrap gap-4">
+                        <a href="https://wa.me/919335300898" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-gold-500 text-white font-bold text-xs tracking-widest uppercase rounded-xl hover:bg-gold-600 hover:shadow-gold-glow transition-all duration-300 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Connect instantly
+                        </a>
+                        <a href="https://www.instagram.com/adproduction04/" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 border border-slate-200 bg-white/60 backdrop-blur-md hover:bg-white/90 text-slate-700 font-bold text-xs tracking-widest uppercase rounded-xl transition-all duration-300 flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-sm text-pink-500"></i> Instagram Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties: Signature Services in Crisp Glass Cards -->
+    <section id="services" class="py-28 bg-white/40 border-y border-slate-200/60 backdrop-blur-2xl relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.30em]">Crafting Masterpieces</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Our Signature Specialties</h2>
+                <div class="w-16 h-[2.5px] bg-gold-500 mx-auto mt-4"></div>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-medium">From majestic Lucknow pre-weddings to luxury destination palace celebrations, select our professional focus matching your requirements.</p>
+            </div>
+
+            <!-- Signature Glass Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Wedding Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-gem text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Wedding Celebrations</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Absolute cinematic coverage of traditional nuptials, capturing elegant rituals, spontaneous raw emotions, and timeless bridal portraits.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Destination Weddings Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-plane-departure text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Destination Weddings</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Fully equipped mobile production unit ready to conquer majestic palace setups, coastal views, and heritage properties across India.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Pre-Weddings Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-heart text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Pre-Wedding Shoots</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Stylized storytelling in Lucknow's heritage places, customized visual frames, premium drone-guided cinematics, and couture-themed concepts.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Events Coverage Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-calendar-days text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Corporate & Private Events</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Flawless, crisp documentation of grand milestone events, concerts, social gatherings, and festivals with lightning-fast professional delivery.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Post-Wedding Rituals Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-id-card text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Post-Wedding Shoots</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Homecoming documentation, casual intimate morning sessions, and romantic honeymoon couples portraiture free from busy wedding rituals.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Cinematic Video Editing Card -->
+                <div class="group bg-white/60 rounded-3xl border border-white p-8 hover:border-gold-500/40 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 hover:shadow-liquid-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center group-hover:bg-gold-500 transition-all duration-500 group-hover:shadow-gold-glow">
+                            <i class="fa-solid fa-video text-gold-500 text-xl group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-900 group-hover:text-gold-500 transition-colors">Cinematography & Editing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light">Luxurious 4K color grading, specialized audio soundscaping, and premium trailers crafted painstakingly by professional feature film editors.</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-slate-100 flex items-center text-xs text-gold-500 font-bold uppercase tracking-widest relative z-10">
+                        Explore packages <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow: Cinematic Journey Timeline in Glass -->
+    <section class="py-28 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">Our Production DNA</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">The Cinematic Journey</h2>
+                <div class="w-16 h-[2px] bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Glass Workflow Capsules -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="bg-white/60 border border-white rounded-2xl p-6 relative hover:border-gold-500/40 hover:bg-white/90 transition-all duration-300 shadow-sm">
+                    <span class="text-5xl font-serif font-bold text-slate-200 absolute right-4 top-4">01</span>
+                    <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/35 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-comments text-gold-500 text-sm"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-950 mb-2">Creative Consult</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed font-light">Custom mood boards and timeline visualization conceptualized perfectly with you before any camera click.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white/60 border border-white rounded-2xl p-6 relative hover:border-gold-500/40 hover:bg-white/90 transition-all duration-300 shadow-sm">
+                    <span class="text-5xl font-serif font-bold text-slate-200 absolute right-4 top-4">02</span>
+                    <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/35 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-bullseye text-gold-500 text-sm"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-950 mb-2">Live Production</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed font-light">Unobtrusive lifestyle framing and direction using prime cinematic gear to capture real, raw connections seamlessly.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white/60 border border-white rounded-2xl p-6 relative hover:border-gold-500/40 hover:bg-white/90 transition-all duration-300 shadow-sm">
+                    <span class="text-5xl font-serif font-bold text-slate-200 absolute right-4 top-4">03</span>
+                    <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/35 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-sliders text-gold-500 text-sm"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-950 mb-2">Post Color grading</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed font-light">Handcrafted color profiles and audio alignment matching raw emotional weight with cinema standards.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white/60 border border-white rounded-2xl p-6 relative hover:border-gold-500/40 hover:bg-white/90 transition-all duration-300 shadow-sm">
+                    <span class="text-5xl font-serif font-bold text-slate-200 absolute right-4 top-4">04</span>
+                    <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/35 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-photo-film text-gold-500 text-sm"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-950 mb-2">The Premiere</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed font-light">Immediate cloud preview updates followed by premium hand-assembled customized leather albums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Gallery: Fully Visible & Stunning High Res Works -->
+    <section id="portfolio" class="py-28 bg-[#f1f5f9] border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header and Filter Menu -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block mb-2">Selected Captures</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Our Master Collection</h2>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2 text-xs uppercase tracking-widest font-semibold bg-white/80 p-1.5 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <button @click="activeFilter = 'all'" :class="activeFilter === 'all' ? 'bg-gold-500 text-white shadow-gold-glow' : 'text-slate-600 hover:text-gold-500'" class="py-2 px-5 rounded-xl transition-all duration-300">All</button>
+                    <button @click="activeFilter = 'wedding'" :class="activeFilter === 'wedding' ? 'bg-gold-500 text-white shadow-gold-glow' : 'text-slate-600 hover:text-gold-500'" class="py-2 px-5 rounded-xl transition-all duration-300">Wedding</button>
+                    <button @click="activeFilter = 'prewedding'" :class="activeFilter === 'prewedding' ? 'bg-gold-500 text-white shadow-gold-glow' : 'text-slate-600 hover:text-gold-500'" class="py-2 px-5 rounded-xl transition-all duration-300">Pre-Wedding</button>
+                    <button @click="activeFilter = 'cinematic'" :class="activeFilter === 'cinematic' ? 'bg-gold-500 text-white shadow-gold-glow' : 'text-slate-600 hover:text-gold-500'" class="py-2 px-5 rounded-xl transition-all duration-300">Films</button>
+                </div>
+            </div>
+
+            <!-- Masonry Portfolio Grid (Grayscale & dark overlays completely fixed!) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <template x-for="(item, index) in filteredGallery()" :key="index">
+                    <div class="group relative rounded-3xl overflow-hidden aspect-[4/5] bg-white border border-slate-200 shadow-sm cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:shadow-liquid-light"
+                         @click="openLightbox(item.image, item.title, item.category)">
+                        
+                        <!-- High Quality Fully Visible Vibrant Image -->
+                        <img :src="item.image" :alt="item.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-100">
+                        
+                        <!-- Premium Glass Interactive Overlay Details on Hover -->
+                        <div class="absolute inset-x-4 bottom-4 bg-white/85 backdrop-blur-md border border-white rounded-2xl p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end">
+                            <span class="text-gold-600 text-xs uppercase tracking-[0.2em] font-extrabold mb-1" x-text="item.category"></span>
+                            <h3 class="text-slate-900 font-serif text-xl font-bold" x-text="item.title"></h3>
+                            <div class="mt-3 flex items-center justify-between pt-3 border-t border-slate-100">
+                                <span class="text-xs text-slate-500 font-medium flex items-center gap-1.5">
+                                    <i class="fa-regular fa-image text-gold-500"></i> Open Live Showcase
+                                </span>
+                                <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center border border-gold-500/30 group-hover:bg-gold-500 group-hover:text-white transition-colors">
+                                    <i class="fa-solid fa-expand text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Instagram Grid CTA -->
+            <div class="mt-20 text-center">
+                <p class="text-slate-600 font-medium text-sm mb-6">Looking for our live daily sessions, reels, and behind-the-scenes footage?</p>
+                <a href="https://www.instagram.com/adproduction04/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4.5 bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 hover:opacity-95 rounded-2xl text-white font-bold tracking-widest text-xs uppercase transition-all duration-500 transform hover:-translate-y-1 shadow-md">
+                    <i class="fa-brands fa-instagram text-lg"></i> Follow us @adproduction04
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gear Arsenal Section -->
+    <section class="py-24 bg-transparent border-y border-slate-200/60 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">No Compromises</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">The Visual Arsenal</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+                        True luxury storytelling requires absolute precision. We shoot and edit exclusively using premium optical technology to guarantee flawless 4K output and stellar dynamic range in low-light wedding venues.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/60 border border-white hover:border-gold-500/20 shadow-sm transition-all">
+                            <i class="fa-solid fa-circle-check text-gold-500 text-lg"></i>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Full-Frame Cinema Formats</h4>
+                                <p class="text-xs text-slate-500">Sony Cinema Lines & High-Resolution Flagships.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/60 border border-white hover:border-gold-500/20 shadow-sm transition-all">
+                            <i class="fa-solid fa-circle-check text-gold-500 text-lg"></i>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">F1.2 & F1.4 Master Optics</h4>
+                                <p class="text-xs text-slate-500">Pristine bokeh rendering and cinematic depth definition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glass Grid of Tools -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-white/60 border border-white text-center hover:border-gold-500/40 transition duration-300 backdrop-blur-md shadow-sm">
+                        <i class="fa-solid fa-video text-gold-500 text-2xl mb-3"></i>
+                        <h4 class="text-sm font-bold text-slate-900">Cinema FX Line</h4>
+                        <p class="text-[11px] text-slate-500 mt-1">Multi-Cam setups</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/60 border border-white text-center hover:border-gold-500/40 transition duration-300 backdrop-blur-md shadow-sm">
+                        <i class="fa-solid fa-expand text-gold-500 text-2xl mb-3"></i>
+                        <h4 class="text-sm font-bold text-slate-900">G-Master Prime</h4>
+                        <p class="text-[11px] text-slate-500 mt-1">Bespoke lenses</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/60 border border-white text-center hover:border-gold-500/40 transition duration-300 backdrop-blur-md shadow-sm">
+                        <i class="fa-solid fa-helicopter text-gold-500 text-2xl mb-3"></i>
+                        <h4 class="text-sm font-bold text-slate-900">DJI Aerial Mavic</h4>
+                        <p class="text-[11px] text-slate-500 mt-1">Ultra 4K Drone</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/60 border border-white text-center hover:border-gold-500/40 transition duration-300 backdrop-blur-md shadow-sm">
+                        <i class="fa-solid fa-lightbulb text-gold-500 text-2xl mb-3"></i>
+                        <h4 class="text-sm font-bold text-slate-900">Godox Intelligent</h4>
+                        <p class="text-[11px] text-slate-500 mt-1">Studio Light rig</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Event Package Planner in Premium Light Design -->
+    <section id="pricing-estimator" class="py-28 bg-transparent relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">Bespoke Options</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Interactive Event Planner</h2>
+                <div class="w-16 h-[2px] bg-gold-500 mx-auto mt-4"></div>
+                <p class="text-slate-600 text-sm font-medium">Select options below to generate an instant booking blueprint, which you can easily forward directly to our director on WhatsApp.</p>
+            </div>
+
+            <!-- Advanced Glassmorphic Form Body (iOS Light Glass style) -->
+            <div class="bg-white/70 rounded-3xl border border-white p-8 sm:p-12 shadow-ios-glass backdrop-blur-2xl relative overflow-hidden" x-data="packagePlanner()">
+                <div class="absolute -top-32 -left-32 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="space-y-10 relative z-10">
+                    
+                    <!-- Option 1: Choose Shoot Focus -->
+                    <div>
+                        <label class="text-slate-900 font-serif text-lg font-bold block mb-5">1. Select Shoot Focus</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <template x-for="(plan, index) in plans" :key="index">
+                                <div @click="selectedPlan = plan"
+                                     :class="selectedPlan.name === plan.name ? 'border-gold-500 bg-gold-500/5 shadow-gold-glow' : 'border-slate-200/80 bg-white/40 hover:border-slate-300'"
+                                     class="p-5 rounded-2xl border cursor-pointer transition-all duration-300 flex items-center justify-between group">
+                                    <div>
+                                        <p class="text-slate-900 font-bold text-sm group-hover:text-gold-600 transition-colors" x-text="plan.name"></p>
+                                        <p class="text-xs text-slate-500 mt-1 font-light" x-text="plan.desc"></p>
+                                    </div>
+                                    <div class="w-5 h-5 rounded-full border border-gold-500 flex items-center justify-center shrink-0 ml-3">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-gold-500" x-show="selectedPlan.name === plan.name"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Choose Required Deliverables -->
+                    <div>
+                        <label class="text-slate-900 font-serif text-lg font-bold block mb-5">2. Select Premium Add-ons</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <template x-for="(addon, index) in addons" :key="index">
+                                <div @click="toggleAddon(addon)"
+                                     :class="isAddonSelected(addon) ? 'border-gold-500 bg-gold-500/5' : 'border-slate-200/80 bg-white/40 hover:border-slate-300'"
+                                     class="p-5 rounded-2xl border cursor-pointer transition-all duration-300 flex flex-col justify-between group shadow-sm">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-white transition-all">
+                                            <i class="fa-solid" :class="addon.icon"></i>
+                                        </div>
+                                        <div class="w-4 h-4 rounded border border-gold-500 flex items-center justify-center">
+                                            <i class="fa-solid fa-check text-[10px] text-gold-500" x-show="isAddonSelected(addon)"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-slate-900 font-extrabold text-xs" x-text="addon.name"></p>
+                                        <p class="text-[10px] text-slate-500 mt-1 font-light leading-relaxed" x-text="addon.desc"></p>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Option 3: Event Date & Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Tentative Event Date</label>
+                            <input type="date" x-model="eventDate" class="w-full bg-white/80 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-gold-500 focus:bg-white transition-all shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Estimated Location</label>
+                            <input type="text" x-model="eventLocation" placeholder="e.g. LDA Colony, Lucknow" class="w-full bg-white/80 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-gold-500 focus:bg-white transition-all shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- Summary Glass Panel -->
+                    <div class="mt-8 pt-8 border-t border-slate-200 bg-slate-50/70 rounded-2xl p-6 border border-slate-100">
+                        <h4 class="text-gold-600 font-serif text-base font-bold uppercase tracking-widest mb-4">Selected Blueprint Summary</h4>
+                        <div class="space-y-3.5 text-xs sm:text-sm text-slate-700">
+                            <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
+                                <span class="font-light">Primary Focus:</span>
+                                <span class="text-slate-900 font-bold" x-text="selectedPlan.name"></span>
+                            </div>
+                            <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
+                                <span class="font-light">Custom Add-ons:</span>
+                                <span class="text-slate-900 font-bold text-right truncate max-w-[200px] sm:max-w-none" x-text="getSelectedAddonsList()"></span>
+                            </div>
+                            <div class="flex justify-between items-center py-1.5 border-b border-slate-100" x-show="eventDate">
+                                <span class="font-light">Target Schedule Date:</span>
+                                <span class="text-slate-900 font-bold" x-text="eventDate"></span>
+                            </div>
+                            <div class="flex justify-between items-center py-1.5" x-show="eventLocation">
+                                <span class="font-light">Venue City:</span>
+                                <span class="text-gold-600 font-bold" x-text="eventLocation"></span>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Action Forward -->
+                        <div class="mt-8">
+                            <button @click="submitPlan()" class="w-full py-4.5 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold tracking-widest text-xs uppercase transition-all duration-300 transform hover:-translate-y-0.5 shadow-md flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Share This Blueprint on WhatsApp
+                            </button>
+                            <p class="text-center text-[10px] text-slate-500 mt-3 font-light">Zero obligations. Our scheduling manager will send detailed customized rate sheets immediately.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <section class="py-28 bg-[#f1f5f9] border-t border-slate-200 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">Word of Mouth</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Client Confessions</h2>
+                <div class="w-16 h-[2px] bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Reviews Grid (frosted look) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white/60 border border-white p-8 rounded-3xl hover:border-gold-500/40 hover:bg-white transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-1 text-gold-500 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light italic">"Adproduction shot my sister's wedding in LDA Colony, Lucknow. Absolute professionals! The photos came out like scenes from a movie. High recommendation."</p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <h4 class="text-slate-900 font-bold text-sm">Aman Srivastava</h4>
+                        <p class="text-xs text-slate-400 mt-1">Google Local Guide, Lucknow</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/60 border border-white p-8 rounded-3xl hover:border-gold-500/40 hover:bg-white transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-1 text-gold-500 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light italic">"Extremely satisfied with their pre-wedding photoshoot. They found amazing heritage settings across Lucknow. High energy and outstanding color palettes!"</p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <h4 class="text-slate-900 font-bold text-sm">Priyanka Verma</h4>
+                        <p class="text-xs text-slate-400 mt-1">Couple Session Client</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/60 border border-white p-8 rounded-3xl hover:border-gold-500/40 hover:bg-white transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-1 text-gold-500 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed font-light italic">"Outstanding cinematic trailer editing output. They compiled 4 days of wedding events into a neat, emotionally-driven, premium 5-minute video."</p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <h4 class="text-slate-900 font-bold text-sm">Rajat Mishra</h4>
+                        <p class="text-xs text-slate-400 mt-1">Destination Wedding Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion with Glass styling -->
+    <section class="py-24 bg-transparent border-t border-slate-200" x-data="{ activeFaq: null }">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.3em] block">Inquiries</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                <div class="w-16 h-[2px] bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Accordion List in Glass -->
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-white/60 border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 1) ? null : 1" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-sm sm:text-base font-bold text-slate-900">Do you travel outside Lucknow for Destination shoots?</span>
+                        <i class="fa-solid text-gold-500 text-xs transition-transform duration-300" :class="activeFaq === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 1" x-collapse class="px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed font-light" x-cloak>
+                        Absolutely! We have an extensive travel-ready photography and filming unit setup. We have covered beautiful destination weddings and couple portraits across major historical properties in Rajasthan, beaches of Goa, and elegant resorts nationwide.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white/60 border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 2) ? null : 2" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-sm sm:text-base font-bold text-slate-900">How much time does it take to deliver final photos and wedding trailers?</span>
+                        <i class="fa-solid text-gold-500 text-xs transition-transform duration-300" :class="activeFaq === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 2" x-collapse class="px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed font-light" x-cloak>
+                        We provide teaser frames within 1-2 weeks. The complete high-resolution color-graded portfolio images and premium wedding cinematic films are processed, refined, and delivered within 6 to 8 weeks.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white/60 border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 3) ? null : 3" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-sm sm:text-base font-bold text-slate-900">Can we schedule a custom consultation at your Lucknow LDA Colony studio?</span>
+                        <i class="fa-solid text-gold-500 text-xs transition-transform duration-300" :class="activeFaq === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 3" x-collapse class="px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed font-light" x-cloak>
+                        Yes, definitely. Our physical studio is open every single day from 9:00 AM to 10:00 PM. We strongly recommend booking a brief call or WhatsApp scheduling before visiting so our senior director is available to showcase raw premium physical wedding albums.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Contact Section & Interactive Google Maps -->
+    <section id="contact" class="py-28 bg-[#f1f5f9] border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                
+                <!-- Left Details -->
+                <div class="space-y-10">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold text-gold-500 uppercase tracking-[0.25em] block">Locate Us</span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight">Our Lucknow Studio</h2>
+                    </div>
+                    
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+                        Our premium experience office is open daily to discuss project blueprints, showcase hand-stitched premium layout albums, and lock session calendars.
+                    </p>
+
+                    <!-- Core Information Capsules -->
+                    <div class="space-y-6">
+                        
+                        <!-- Address -->
+                        <div class="flex items-start gap-4.5 p-5 rounded-2xl bg-white border border-slate-200 hover:border-gold-500/30 transition-all duration-300 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center border border-gold-500/25 shrink-0">
+                                <i class="fa-solid fa-location-dot text-gold-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-serif font-bold text-base">Studio Address</h4>
+                                <p class="text-slate-600 text-sm mt-1 font-medium leading-relaxed">Ed1/132Lda, Colony Rd, Sector D1, LDA Colony, Lucknow, Uttar Pradesh 226012</p>
+                                <a href="https://www.google.com/maps/place/Adproduction/@26.7851745,80.8998271,17z" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:text-gold-700 text-xs font-bold uppercase tracking-widest mt-3.5 inline-flex items-center gap-1.5">
+                                    <i class="fa-solid fa-map-location-dot"></i> Get Directions on Google Maps
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contacts -->
+                        <div class="flex items-start gap-4.5 p-5 rounded-2xl bg-white border border-slate-200 hover:border-gold-500/30 transition-all duration-300 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center border border-gold-500/25 shrink-0">
+                                <i class="fa-solid fa-phone text-gold-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-serif font-bold text-base">Hotlines</h4>
+                                <p class="text-slate-600 text-sm mt-1 font-semibold">093353 00898 &nbsp;|&nbsp; +91 93353 00898</p>
+                                <div class="flex gap-5 mt-3.5">
+                                    <a href="tel:09335300898" class="text-gold-600 hover:text-gold-700 text-xs font-bold uppercase tracking-widest flex items-center gap-1.5">
+                                        <i class="fa-solid fa-phone-flip text-xs"></i> Call Studio
+                                    </a>
+                                    <a href="https://wa.me/919335300898" target="_blank" class="text-green-600 hover:text-green-700 text-xs font-bold uppercase tracking-widest flex items-center gap-1.5">
+                                        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4.5 p-5 rounded-2xl bg-white border border-slate-200 hover:border-gold-500/30 transition-all duration-300 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center border border-gold-500/25 shrink-0">
+                                <i class="fa-solid fa-clock text-gold-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-serif font-bold text-base">Operating Hours</h4>
+                                <p class="text-slate-600 text-sm mt-1 font-medium leading-relaxed">Monday – Sunday: 09:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Justdial and Instagram Verification ribbons -->
+                    <div class="pt-6 border-t border-slate-200 flex flex-wrap gap-4 items-center">
+                        <span class="text-xs text-slate-500 font-bold tracking-widest uppercase">Verified Portals:</span>
+                        <a href="https://www.justdial.com/Lucknow/Adproduction-Industrial-Area/0522PX522-X522-230308020525-L1Z5_BZDET" target="_blank" rel="noopener noreferrer" class="px-4.5 py-2.5 bg-blue-600/10 border border-blue-200 hover:bg-blue-100 text-blue-700 rounded-xl text-xs font-bold flex items-center gap-2 transition">
+                            <i class="fa-solid fa-address-book text-blue-600"></i> Justdial Profile
+                        </a>
+                        <a href="https://www.instagram.com/adproduction04/" target="_blank" rel="noopener noreferrer" class="px-4.5 py-2.5 bg-pink-600/10 border border-pink-200 hover:bg-pink-100 text-pink-700 rounded-xl text-xs font-bold flex items-center gap-2 transition">
+                            <i class="fa-brands fa-instagram text-pink-600"></i> Instagram Feed
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Interactive Widget -->
+                <div class="relative h-[350px] lg:h-auto rounded-3xl overflow-hidden border border-slate-200 shadow-liquid-light bg-white p-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.463133333324!2d80.9002133150!3d26.7851745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfb5d8e64c327%3A0x9323e1fb7dd9b992!2sAdproduction!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            class="absolute inset-0 w-full h-full rounded-2xl opacity-90 hover:opacity-100 transition-all duration-500"
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Footer -->
+    <footer class="bg-white border-t border-slate-200 py-16 relative z-20 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl border border-gold-500 flex items-center justify-center bg-white shadow-sm">
+                        <i class="fa-solid fa-camera text-gold-500 text-sm"></i>
+                    </div>
+                    <span class="text-lg font-serif font-bold text-slate-900 tracking-[0.15em]">
+                        AD<span class="text-gold-500">PRODUCTION</span>
+                    </span>
+                </div>
+                
+                <p class="text-xs text-slate-500 text-center md:text-right font-semibold leading-relaxed">
+                    &copy; 2026 Adproduction Lucknow. All rights reserved. &nbsp;|&nbsp; Tailored for elite luxury visual experiences.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation bar -->
+    <div class="md:hidden fixed bottom-5 left-5 right-5 z-40 bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200 shadow-liquid-light p-3.5 flex justify-around items-center">
+        <a href="tel:09335300898" class="flex flex-col items-center gap-1 text-slate-600 hover:text-gold-500 transition-colors">
+            <i class="fa-solid fa-phone text-lg"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Call Studio</span>
+        </a>
+        <a href="https://wa.me/919335300898" class="flex flex-col items-center gap-1 text-green-600 hover:text-green-500 transition-colors">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">WhatsApp</span>
+        </a>
+        <a href="#pricing-estimator" class="flex flex-col items-center gap-1 text-slate-600 hover:text-gold-500 transition-colors">
+            <i class="fa-solid fa-calendar-check text-lg"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Plan Event</span>
+        </a>
+        <a href="https://www.instagram.com/adproduction04/" target="_blank" class="flex flex-col items-center gap-1 text-pink-500 hover:text-pink-400 transition-colors">
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Instagram</span>
+        </a>
+    </div>
+
+    <!-- Full-Screen Lightbox Module -->
+    <div x-show="lightboxOpen" 
+         @keydown.escape.window="closeLightbox()"
+         class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-10"
+         x-transition:enter="transition duration-400 ease-out"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition duration-300 ease-in"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         x-cloak>
+         
+         <!-- Close Button -->
+         <button @click="closeLightbox()" class="absolute top-6 right-6 w-11 h-11 bg-white/10 border border-white/20 rounded-xl text-white hover:text-gold-400 text-lg flex items-center justify-center z-55 transition">
+             <i class="fa-solid fa-xmark"></i>
+         </button>
+
+         <!-- Lightbox Content Area -->
+         <div class="relative max-w-5xl max-h-full flex flex-col items-center justify-center" @click.away="closeLightbox()">
+             <img :src="lightboxImg" :alt="lightboxTitle" class="max-w-full max-h-[75vh] object-contain rounded-2xl border border-white/15 shadow-2xl">
+             <div class="text-center mt-6 space-y-2">
+                 <span class="text-gold-400 text-xs uppercase tracking-[0.25em] font-bold" x-text="lightboxCategory"></span>
+                 <h4 class="text-white font-serif text-2xl font-bold" x-text="lightboxTitle"></h4>
+             </div>
+         </div>
+    </div>
+
+    <!-- Script Settings & State Managers -->
+    <script>
+        // Safely suppress benign Alpine framework transition cancellations
+        window.addEventListener('unhandledrejection', function (event) {
+            if (event.reason && (event.reason.isFromCancelledTransition || (typeof event.reason === 'object' && event.reason.isFromCancelledTransition === true))) {
+                event.preventDefault();
+            }
+        });
+
+        function portfolioApp() {
+            return {
+                scrolled: false,
+                mobileMenuOpen: false,
+                activeSlide: 0,
+                activeFilter: 'all',
+                slideInterval: null,
+                
+                // Lightbox Settings
+                lightboxOpen: false,
+                lightboxImg: '',
+                lightboxTitle: '',
+                lightboxCategory: '',
+
+                // Beautifully composed, highly vibrant wedding-themed slides
+                heroSlides: [
+                    {
+                        image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1400',
+                        title: 'Golden Love Stories',
+                        subtitle: 'Pre-wedding Couples Shoots in Lucknow'
+                    },
+                    {
+                        image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1400',
+                        title: 'Elite Indian Weddings',
+                        subtitle: 'Traditional Rituals & Cinematic Reels'
+                    },
+                    {
+                        image: 'https://images.unsplash.com/photo-1621616875450-79f224480400?q=80&w=1400',
+                        title: 'Cinematography Mastery',
+                        subtitle: '4K Storytelling and Post-Processing'
+                    }
+                ],
+
+                // Vibrant high resolution gallery assets
+                galleryItems: [
+                    { image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1000', title: 'Monuments of Devotion', category: 'prewedding' },
+                    { image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000', title: 'The Royal Baraat Entry', category: 'wedding' },
+                    { image: 'https://images.unsplash.com/photo-1621616875450-79f224480400?q=80&w=1000', title: 'Luxury Bridal Portrait', category: 'wedding' },
+                    { image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000', title: 'Emotional Vidaai Frames', category: 'cinematic' },
+                    { image: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1000', title: 'Sunset Silhouette Romance', category: 'prewedding' },
+                    { image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000', title: 'Grand Mehendi Vibe', category: 'wedding' }
+                ],
+
+                init() {
+                    this.startRotation();
+                },
+
+                startRotation() {
+                    if (this.slideInterval) clearInterval(this.slideInterval);
+                    this.slideInterval = setInterval(() => {
+                        this.activeSlide = (this.activeSlide + 1) % this.heroSlides.length;
+                    }, 5000);
+                },
+
+                changeSlide(index) {
+                    this.activeSlide = index;
+                    this.startRotation(); // Resets timer on manual click to avoid overlapping transitions
+                },
+
+                // Filters
+                filteredGallery() {
+                    if (this.activeFilter === 'all') {
+                        return this.galleryItems;
+                    }
+                    return this.galleryItems.filter(item => item.category === this.activeFilter);
+                },
+
+                // Lightbox controller actions
+                openLightbox(img, title, category) {
+                    this.lightboxImg = img;
+                    this.lightboxTitle = title;
+                    this.lightboxCategory = category;
+                    this.lightboxOpen = true;
+                },
+                closeLightbox() {
+                    this.lightboxOpen = false;
+                }
+            }
+        }
+
+        // Package Planner Component State
+        function packagePlanner() {
+            return {
+                plans: [
+                    { name: 'Elite Wedding Master', desc: 'Full scale traditional & candid wedding coverage' },
+                    { name: 'Heritage Pre-Wedding', desc: 'Stylized concepts in historic Lucknow sites' },
+                    { name: 'Cinematic Dream Package', desc: '4K filming, specialized color grading focus' },
+                    { name: 'Intimate Event Session', desc: 'Homecoming rituals, reception & private sessions' }
+                ],
+                addons: [
+                    { name: 'Cinematic Teaser', desc: 'Custom 1-min Instagram edit', icon: 'fa-clapperboard' },
+                    { name: 'Luxury Hardcover Album', desc: 'Bespoke hand-bound flush mount album', icon: 'fa-book-open' },
+                    { name: 'Drone Aerial Frames', desc: 'Premium FAA/local regulated drone shots', icon: 'fa-helicopter' }
+                ],
+                selectedPlan: null,
+                selectedAddons: [],
+                eventDate: '',
+                eventLocation: '',
+
+                init() {
+                    this.selectedPlan = this.plans[0];
+                },
+
+                toggleAddon(addon) {
+                    const idx = this.selectedAddons.findIndex(item => item.name === addon.name);
+                    if (idx > -1) {
+                        this.selectedAddons.splice(idx, 1);
+                    } else {
+                        this.selectedAddons.push(addon);
+                    }
+                },
+
+                isAddonSelected(addon) {
+                    return this.selectedAddons.some(item => item.name === addon.name);
+                },
+
+                getSelectedAddonsList() {
+                    if (this.selectedAddons.length === 0) return 'None Selected';
+                    return this.selectedAddons.map(a => a.name).join(', ');
+                },
+
+                // Formulate and trigger blueprint data straight to Adproduction WhatsApp Hotline
+                submitPlan() {
+                    const mainPlanName = this.selectedPlan ? this.selectedPlan.name : 'Not Specified';
+                    const addonNames = this.selectedAddons.length > 0 ? this.selectedAddons.map(a => a.name).join(', ') : 'No custom add-ons selected';
+                    const targetDate = this.eventDate || 'TBD (To Be Decided)';
+                    const location = this.eventLocation || 'Lucknow / TBD';
+                    
+                    const messageText = `Hello Adproduction! 📸%0A` +
+                                        `I have configured an event plan blueprint on your website. Here are my details:%0A%0A` +
+                                        `*🎯 Main Event Focus:* ${mainPlanName}%0A` +
+                                        `*✨ Custom Deliverables:* ${addonNames}%0A` +
+                                        `*📅 Target Date:* ${targetDate}%0A` +
+                                        `*📍 Location:* ${location}%0A%0A` +
+                                        `Please send over your standard rate matrices and calendar availability. Thank you!`;
+                                        
+                    const whatsappUrl = `https://wa.me/919335300898?text=${messageText}`;
+                    window.open(whatsappUrl, '_blank');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
